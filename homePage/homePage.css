@@ -1,6 +1,7 @@
 * {
   font-family: Roboto;
-  margin: 0; }
+  margin: 0;
+}
 
 :root {
   --main-color-background: #f6f6f6;
@@ -13,12 +14,15 @@
   --main-color-grey: #353535;
   --main-color-grey2: #eaeaea;
   --main-color-grey4: #7e7e7e;
-  --main-color-buttonGradient: linear-gradient(#9356dc, #ff79da); }
+  --main-color-buttonGradient: linear-gradient(#9356dc, #ff79da);
+}
 
 body {
   position: relative;
   max-width: 767px;
-  border: 1px solid #101010; }
+  border: 1px solid #101010;
+  background-color: var(--main-color-background);
+}
 
 header {
   display: flex;
@@ -26,21 +30,25 @@ header {
   justify-content: center;
   align-items: center;
   height: 63px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75); }
-  header .fleche {
-    display: flex;
-    position: absolute;
-    left: 17px;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px; }
-    header .fleche img {
-      width: 17.2px;
-      height: 16px; }
-  header img {
-    width: 162px;
-    height: 44px; }
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+header .fleche {
+  display: flex;
+  position: absolute;
+  left: 17px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+header .fleche img {
+  width: 17.2px;
+  height: 16px;
+}
+header img {
+  width: 162px;
+  height: 44px;
+}
 
 .location {
   position: absolute;
@@ -52,50 +60,57 @@ header {
   height: 50px;
   width: 100%;
   background-color: var(--main-color-grey2);
-  z-index: -1; }
-  .location img {
-    width: 12px;
-    height: 16px; }
-  .location p {
-    font-weight: 500;
-    font-size: 16px; }
+  z-index: -1;
+}
+.location img {
+  width: 12px;
+  height: 16px;
+}
+.location p {
+  font-weight: 500;
+  font-size: 16px;
+}
 
 .explorateur {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 89px; }
-  .explorateur h3 {
-    display: flex;
-    width: 275px;
-    height: 68px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center; }
-  .explorateur p {
-    display: flex;
-    width: 307px;
-    height: 46px;
-    font-size: 18px;
-    font-weight: 300;
-    text-align: center;
-    color: var(--main-color-grey); }
-  .explorateur button {
-    display: flex;
-    width: 218px;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 25px;
-    background: var(--main-color-buttonGradient);
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    margin-top: 27px;
-    margin-bottom: 57px; }
+  padding-top: 89px;
+}
+.explorateur h3 {
+  display: flex;
+  width: 275px;
+  height: 68px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.explorateur p {
+  display: flex;
+  width: 307px;
+  height: 46px;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--main-color-grey);
+}
+.explorateur button {
+  display: flex;
+  width: 218px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 25px;
+  background: var(--main-color-buttonGradient);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 27px;
+  margin-bottom: 57px;
+}
 
 .fonctionnement {
   display: flex;
@@ -105,43 +120,71 @@ header {
   padding-right: 20px;
   padding-top: 48px;
   padding-bottom: 48px;
-  height: 440px; }
-  .fonctionnement h3 {
-    font-size: 24px; }
-  .fonctionnement .group1 {
-    position: relative;
-    width: 100%;
-    height: 72.38px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .fonctionnement .group1 .group2 {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background-color: var(--main-color-primary);
-      color: #fff;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1; }
-    .fonctionnement .group1 .group3 {
-      display: flex;
-      position: absolute;
-      right: 0;
-      align-items: center;
-      width: 86%;
-      height: 100%;
-      border-radius: 20px;
-      background-color: var(--main-color-background);
-      padding-left: 10%;
-      gap: 5%; }
-      .fonctionnement .group1 .group3 p {
-        font-size: 16px;
-        font-weight: 500; }
+  height: 440px;
+  background-color: #fff;
+}
+.fonctionnement h3 {
+  font-size: 24px;
+}
+.fonctionnement .group1 {
+  position: relative;
+  width: 100%;
+  height: 72.38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fonctionnement .group1 .group2 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--main-color-primary);
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.fonctionnement .group1 .group3 {
+  display: flex;
+  position: absolute;
+  right: 0;
+  align-items: center;
+  width: 86%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--main-color-background);
+  padding-left: 10%;
+  gap: 5%;
+}
+.fonctionnement .group1 .group3 p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.125em;
+  padding-top: 40px;
+}
+.restaurants h2 {
+  width: 100%;
+}
+
+.restaurant {
+  width: 90%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.restaurant img {
+  width: 100%;
+}
 
 /*# sourceMappingURL=homePage.css.map */
