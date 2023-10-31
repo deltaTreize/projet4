@@ -177,14 +177,74 @@ header img {
   width: 100%;
 }
 
+.coeur {
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 21px;
+}
+.coeur #coeurVide {
+  display: block;
+}
+.coeur #coeurPlein {
+  display: none;
+}
+
+.coeur.liked #coeurVide {
+  display: none;
+}
+.coeur.liked #coeurPlein {
+  display: block;
+}
+
 .restaurant {
+  position: relative;
   width: 90%;
+  height: 251px;
   border-radius: 15px;
   overflow: hidden;
   background-color: #fff;
 }
-.restaurant img {
+.restaurant .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   width: 100%;
+  height: 70%;
+}
+.restaurant .image img {
+  width: 100%;
+}
+.restaurant .new {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 29px;
+  right: 12px;
+  top: 13px;
+  background-color: var(--main-color-green);
+  color: var(--main-color-greenfront);
+}
+.restaurant .texte {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.restaurant h3 {
+  font-size: 18px;
+}
+.restaurant p {
+  font-size: 17px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=homePage.css.map */
