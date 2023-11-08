@@ -174,7 +174,7 @@ header {
     width: 100%;
   }
 }
-.coeur {
+.coeur-label {
   position: absolute;
   right: 25px;
   bottom: 33px;
@@ -189,12 +189,14 @@ header {
   #coeurPlein {
     display: none;
   }
-  &:active{
-    #coeurVide {
-      display: none;
-    }
-    #coeurPlein {
-      display: block;
+  #coeur-checkbox,
+  #coeur-checkbox2,
+  #coeur-checkbox3,
+  #coeur-checkbox4 {
+    display: none;
+    &:checked + .coeur-svg {
+      fill: #9356dc;
+      stroke: none;
     }
   }
 }
@@ -236,10 +238,10 @@ header {
     justify-content: center;
     gap: 5px;
   }
-  h3{
+  h3 {
     font-size: 18px;
   }
-  p{
+  p {
     font-size: 17px;
     font-weight: 300;
   }

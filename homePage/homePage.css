@@ -177,7 +177,7 @@ header img {
   width: 100%;
 }
 
-.coeur {
+.coeur-label {
   position: absolute;
   right: 25px;
   bottom: 33px;
@@ -187,17 +187,24 @@ header img {
   width: 22px;
   height: 21px;
 }
-.coeur #coeurVide {
+.coeur-label #coeurVide {
   display: block;
 }
-.coeur #coeurPlein {
+.coeur-label #coeurPlein {
   display: none;
 }
-.coeur:active #coeurVide {
+.coeur-label #coeur-checkbox,
+.coeur-label #coeur-checkbox2,
+.coeur-label #coeur-checkbox3,
+.coeur-label #coeur-checkbox4 {
   display: none;
 }
-.coeur:active #coeurPlein {
-  display: block;
+.coeur-label #coeur-checkbox:checked + .coeur-svg,
+.coeur-label #coeur-checkbox2:checked + .coeur-svg,
+.coeur-label #coeur-checkbox3:checked + .coeur-svg,
+.coeur-label #coeur-checkbox4:checked + .coeur-svg {
+  fill: #9356dc;
+  stroke: none;
 }
 
 .restaurant {
