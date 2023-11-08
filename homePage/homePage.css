@@ -193,11 +193,10 @@ header img {
 .coeur #coeurPlein {
   display: none;
 }
-
-.coeur.liked #coeurVide {
+.coeur:active #coeurVide {
   display: none;
 }
-.coeur.liked #coeurPlein {
+.coeur:active #coeurPlein {
   display: block;
 }
 

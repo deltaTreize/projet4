@@ -189,13 +189,13 @@ header {
   #coeurPlein {
     display: none;
   }
-}
-.coeur.liked {
-  #coeurVide {
-    display: none;
-  }
-  #coeurPlein {
-    display: block;
+  &:active{
+    #coeurVide {
+      display: none;
+    }
+    #coeurPlein {
+      display: block;
+    }
   }
 }
 
