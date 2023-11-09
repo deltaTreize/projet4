@@ -20,8 +20,6 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 425px;
-  height: 1000px;
-  border: 1px solid black;
   background-color: var(--main-color-background);
 }
 header {
@@ -34,6 +32,7 @@ header {
   background: #fff;
   .fleche {
     display: flex;
+    position: absolute;
     left: 17px;
     justify-content: center;
     align-items: center;
@@ -62,6 +61,7 @@ header {
   align-items: center;
   width: 22px;
   height: 21px;
+  box-shadow: none;
   #coeurVide {
     display: block;
   }
@@ -82,6 +82,7 @@ header {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: var(--main-color-background);
   width: calc(100% - 13px - 13px);
   border-radius: 50px 50px 0 0;
@@ -92,20 +93,28 @@ header {
   .title {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-right: 41px;
-    padding-left: 17px;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
     h2 {
       font-family: shrikhand;
       font-size: 28px;
+      font-weight: 400;
+      width: auto;
     }
   }
 }
+label{
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
 
-.entrees {
+.entrees, .plats, .desserts {
   display: flex;
   flex-direction: column;
+
   gap: 12px;
+  width: 100%;
 }
 .title-box {
   height: 27px;
@@ -126,27 +135,40 @@ header {
     background-color: var(--main-color-green);
   }
 }
-.checkedentree {
+.entree-label, .plat-label, .dessert-label {
   display: flex;
-  width: 59px;
-  height: 100%;
-}
-.entree {
-  display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   height: 69px;
   border-radius: 15px;
   background-color: #fff;
   overflow: hidden;
   align-items: flex-end;
   padding-left: 15px;
+  #entree-checkbox,
+  #entree-checkbox2,
+  #entree-checkbox3,
+  #plat-checkbox,
+  #plat-checkbox2,
+  #plat-checkbox3,
+  #dessert-checkbox,
+  #dessert-checkbox2,
+  #dessert-checkbox3
+   {
+    display: none;
+  }
+  :checked + #text-row {
+    right: 0;
+  }
   .text {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 10px;
     height: 100%;
     gap: 5px;
+    overflow: hidden;
     h3 {
       font-size: 18px;
       font-weight: 500;
@@ -160,15 +182,43 @@ header {
 
 #text-row {
   display: flex;
+  position: absolute;
+  right: -60px;
+  height: 100%;
+  transition: all linear 0.5s;
+  gap: 0px;
+}
+
+#text-row {
+  display: flex;
   flex-direction: row;
   padding: 0;
+  z-index: 1;
   .prix {
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
+    background: white;
     font-weight: 700;
     padding-bottom: 10px;
-    margin-right: 10px;
+    padding-right: 10px;
+    min-width: 40px;
   }
+}
+
+.commandebtn{
+  display: flex;
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  background:var(--main-color-buttonGradient);
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  margin-bottom: 40px;
 }
 
 footer {

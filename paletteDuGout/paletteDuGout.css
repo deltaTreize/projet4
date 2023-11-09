@@ -21,8 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 425px;
-  height: 1000px;
-  border: 1px solid black;
   background-color: var(--main-color-background);
 }
 
@@ -37,6 +35,7 @@ header {
 }
 header .fleche {
   display: flex;
+  position: absolute;
   left: 17px;
   justify-content: center;
   align-items: center;
@@ -66,6 +65,7 @@ header img {
   align-items: center;
   width: 22px;
   height: 21px;
+  box-shadow: none;
 }
 .coeur-label #coeurVide {
   display: block;
@@ -90,6 +90,7 @@ header img {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: var(--main-color-background);
   width: calc(100% - 13px - 13px);
   border-radius: 50px 50px 0 0;
@@ -101,19 +102,27 @@ header img {
 .container .title {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-right: 41px;
-  padding-left: 17px;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
 }
 .container .title h2 {
   font-family: shrikhand;
   font-size: 28px;
+  font-weight: 400;
+  width: auto;
 }
 
-.entrees {
+label {
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.entrees, .plats, .desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
 }
 
 .title-box {
@@ -136,15 +145,10 @@ header img {
   background-color: var(--main-color-green);
 }
 
-.checkedentree {
+.entree-label, .plat-label, .dessert-label {
   display: flex;
-  width: 59px;
-  height: 100%;
-}
-
-.entree {
-  display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   height: 69px;
   border-radius: 15px;
   background-color: #fff;
@@ -152,34 +156,94 @@ header img {
   align-items: flex-end;
   padding-left: 15px;
 }
-.entree .text {
+.entree-label #entree-checkbox,
+.entree-label #entree-checkbox2,
+.entree-label #entree-checkbox3,
+.entree-label #plat-checkbox,
+.entree-label #plat-checkbox2,
+.entree-label #plat-checkbox3,
+.entree-label #dessert-checkbox,
+.entree-label #dessert-checkbox2,
+.entree-label #dessert-checkbox3, .plat-label #entree-checkbox,
+.plat-label #entree-checkbox2,
+.plat-label #entree-checkbox3,
+.plat-label #plat-checkbox,
+.plat-label #plat-checkbox2,
+.plat-label #plat-checkbox3,
+.plat-label #dessert-checkbox,
+.plat-label #dessert-checkbox2,
+.plat-label #dessert-checkbox3, .dessert-label #entree-checkbox,
+.dessert-label #entree-checkbox2,
+.dessert-label #entree-checkbox3,
+.dessert-label #plat-checkbox,
+.dessert-label #plat-checkbox2,
+.dessert-label #plat-checkbox3,
+.dessert-label #dessert-checkbox,
+.dessert-label #dessert-checkbox2,
+.dessert-label #dessert-checkbox3 {
+  display: none;
+}
+.entree-label :checked + #text-row, .plat-label :checked + #text-row, .dessert-label :checked + #text-row {
+  right: 0;
+}
+.entree-label .text, .plat-label .text, .dessert-label .text {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 10px;
   height: 100%;
   gap: 5px;
+  overflow: hidden;
 }
-.entree .text h3 {
+.entree-label .text h3, .plat-label .text h3, .dessert-label .text h3 {
   font-size: 18px;
   font-weight: 500;
 }
-.entree .text h4 {
+.entree-label .text h4, .plat-label .text h4, .dessert-label .text h4 {
   font-size: 15px;
   font-weight: 300;
 }
 
 #text-row {
   display: flex;
+  position: absolute;
+  right: -60px;
+  height: 100%;
+  transition: all linear 0.5s;
+  gap: 0px;
+}
+
+#text-row {
+  display: flex;
   flex-direction: row;
   padding: 0;
+  z-index: 1;
 }
 #text-row .prix {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
+  background: white;
   font-weight: 700;
   padding-bottom: 10px;
-  margin-right: 10px;
+  padding-right: 10px;
+  min-width: 40px;
+}
+
+.commandebtn {
+  display: flex;
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--main-color-buttonGradient);
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  margin-bottom: 40px;
 }
 
 footer {
