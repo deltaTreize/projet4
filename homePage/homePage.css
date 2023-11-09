@@ -19,7 +19,6 @@
 
 body {
   position: relative;
-  max-width: 425px;
   background-color: var(--main-color-background);
 }
 
@@ -51,16 +50,15 @@ header img {
 }
 
 .location {
-  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 3px;
   gap: 17px;
   height: 50px;
   width: 100%;
   background-color: var(--main-color-grey2);
-  z-index: -1;
 }
 .location img {
   width: 12px;
@@ -115,18 +113,23 @@ header img {
 .fonctionnement {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 48px;
-  padding-bottom: 48px;
-  height: 440px;
+  padding-bottom: 40px;
   background-color: #fff;
+  gap: 40px;
 }
 .fonctionnement h3 {
   font-size: 24px;
 }
-.fonctionnement .group1 {
+.fonctionnement .boutton {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+}
+.fonctionnement .boutton .group1 {
   position: relative;
   width: 100%;
   height: 72.38px;
@@ -134,7 +137,7 @@ header img {
   justify-content: space-between;
   align-items: center;
 }
-.fonctionnement .group1 .group2 {
+.fonctionnement .boutton .group1 .group2 {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -149,7 +152,7 @@ header img {
   align-items: center;
   z-index: 1;
 }
-.fonctionnement .group1 .group3 {
+.fonctionnement .boutton .group1 .group3 {
   display: flex;
   position: absolute;
   right: 0;
@@ -161,7 +164,7 @@ header img {
   padding-left: 10%;
   gap: 5%;
 }
-.fonctionnement .group1 .group3 p {
+.fonctionnement .boutton .group1 .group3 p {
   font-size: 16px;
   font-weight: 500;
 }
@@ -174,6 +177,11 @@ header img {
   padding-top: 40px;
   padding-left: 17px;
   padding-right: 18px;
+}
+.restaurants .restaurentsListe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125em;
 }
 .restaurants h2 {
   width: 100%;
@@ -286,6 +294,61 @@ footer .links a {
 footer .links .gras {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (min-width: 426px) {
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .explorateur {
+    gap: 18px;
+  }
+  .explorateur h3,
+  .explorateur p {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .fonctionnement .boutton {
+    flex-direction: row;
+  }
+  .restaurants .restaurentsListe {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurants .restaurentsListe a {
+    width: 48%;
+    height: 251px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 25px;
+    padding-right: 45px;
+  }
+  footer svg {
+    width: 139px;
+    height: 27px;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-align: center;
+  }
+}
+@media (min-width: 768.5px) {
+  footer {
+    gap: 15px;
+  }
+  footer .links {
+    gap: 15px;
+  }
 }
 
 /*# sourceMappingURL=homePage.css.map */
