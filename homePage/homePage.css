@@ -14,7 +14,7 @@
   --main-color-grey: #353535;
   --main-color-grey2: #eaeaea;
   --main-color-grey4: #7e7e7e;
-  --main-color-buttonGradient: linear-gradient(#9356dc, #ff79da);
+  --main-color-buttonGradient: linear-gradient(#ff79da, #9356dc);
 }
 
 body {
@@ -31,9 +31,10 @@ header {
   align-items: center;
   height: 63px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+  background: #fff;
 }
 header .fleche {
-  display: flex;
+  display: none;
   position: absolute;
   left: 17px;
   justify-content: center;
@@ -46,8 +47,8 @@ header .fleche img {
   height: 16px;
 }
 header img {
-  width: 162px;
-  height: 44px;
+  width: 197px;
+  height: 36px;
 }
 
 .location {
@@ -172,6 +173,8 @@ header img {
   align-items: center;
   gap: 1.125em;
   padding-top: 40px;
+  padding-left: 17px;
+  padding-right: 18px;
 }
 .restaurants h2 {
   width: 100%;
@@ -209,7 +212,7 @@ header img {
 
 .restaurant {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 251px;
   border-radius: 15px;
   overflow: hidden;
@@ -244,6 +247,7 @@ header img {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+  padding-left: 13px;
 }
 .restaurant h3 {
   font-size: 18px;
@@ -251,6 +255,34 @@ header img {
 .restaurant p {
   font-size: 17px;
   font-weight: 300;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 25px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  margin-top: 66px;
+  background-color: var(--main-color-grey);
+}
+footer svg {
+  width: 139px;
+  height: 27px;
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .links a {
+  color: #fff;
+  text-decoration: none;
+}
+footer .links .gras {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=homePage.css.map */
