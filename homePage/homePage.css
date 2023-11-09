@@ -19,8 +19,7 @@
 
 body {
   position: relative;
-  max-width: 767px;
-  border: 1px solid #101010;
+  max-width: 425px;
   background-color: var(--main-color-background);
 }
 
@@ -178,6 +177,10 @@ header img {
 }
 .restaurants h2 {
   width: 100%;
+}
+.restaurants a {
+  text-decoration: none;
+  color: #101010;
 }
 
 .coeur-label {
