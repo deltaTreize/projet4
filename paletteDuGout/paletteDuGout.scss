@@ -91,11 +91,13 @@ header {
   padding-right: 13px;
   gap: 40px;
   .title {
+    opacity: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     gap: 30px;
+    animation: anim 0.5s linear 0.5s forwards;
     h2 {
       font-family: shrikhand;
       font-size: 28px;
@@ -104,6 +106,7 @@ header {
     }
   }
 }
+
 label {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   position: relative;
@@ -112,11 +115,12 @@ label {
 .entrees,
 .plats,
 .desserts {
+  opacity: 0;
   display: flex;
   flex-direction: column;
-
   gap: 12px;
   width: 100%;
+  animation: anim 0.5s linear 1s forwards;
 }
 .title-box {
   height: 27px;
@@ -140,6 +144,7 @@ label {
 .entree-label,
 .plat-label,
 .dessert-label {
+  opacity: 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -149,6 +154,7 @@ label {
   overflow: hidden;
   align-items: flex-end;
   padding-left: 15px;
+  animation: anim 1s linear 1.5s forwards;
   #entree-checkbox,
   #entree-checkbox2,
   #entree-checkbox3,
@@ -199,6 +205,7 @@ label {
   padding: 0;
   z-index: 1;
   .prix {
+    opacity: 0;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -207,10 +214,13 @@ label {
     padding-bottom: 10px;
     padding-right: 10px;
     min-width: 40px;
+    animation: anim 2s linear 2.5s forwards;
+
   }
 }
 
 .commandebtn {
+  opacity: 0;
   display: flex;
   width: 186px;
   height: 50px;
@@ -223,6 +233,13 @@ label {
   font-weight: 500;
   border: none;
   margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  animation: anim 2s linear 3s forwards;
+&:hover{
+  opacity: 0.8;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
 }
 
 footer {
@@ -253,6 +270,15 @@ footer {
     }
   }
 }
+@keyframes anim {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 
 @media (min-width: 426px) {
   body {
