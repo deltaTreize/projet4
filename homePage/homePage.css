@@ -27,6 +27,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 63px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
   background: #fff;
@@ -93,7 +94,7 @@ header img {
   text-align: center;
   color: var(--main-color-grey);
 }
-.explorateur button {
+.explorateur .button {
   display: flex;
   width: 218px;
   height: 50px;
@@ -108,6 +109,7 @@ header img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   margin-top: 27px;
   margin-bottom: 57px;
+  text-decoration: none;
 }
 
 .fonctionnement {
@@ -201,12 +203,6 @@ header img {
   width: 22px;
   height: 21px;
 }
-.coeur-label #coeurVide {
-  display: block;
-}
-.coeur-label #coeurPlein {
-  display: none;
-}
 .coeur-label #coeur-checkbox,
 .coeur-label #coeur-checkbox2,
 .coeur-label #coeur-checkbox3,
@@ -297,11 +293,9 @@ footer .links .gras {
 }
 
 @media (min-width: 426px) {
-  body {
+  .explorateur {
     padding-left: 50px;
     padding-right: 50px;
-  }
-  .explorateur {
     gap: 18px;
   }
   .explorateur h3,
@@ -310,8 +304,16 @@ footer .links .gras {
     justify-content: center;
     align-items: center;
   }
+  .fonctionnement {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   .fonctionnement .boutton {
     flex-direction: row;
+  }
+  .restaurants {
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .restaurants .restaurentsListe {
     width: 100%;
@@ -340,9 +342,22 @@ footer .links .gras {
     flex-direction: row;
     gap: 5px;
     text-align: center;
+    align-items: center;
   }
 }
 @media (min-width: 768.5px) {
+  .explorateur {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .fonctionnement {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .restaurants {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
   footer {
     gap: 15px;
   }

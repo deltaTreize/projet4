@@ -20,7 +20,6 @@
 body {
   display: flex;
   flex-direction: column;
-  max-width: 425px;
   background-color: var(--main-color-background);
 }
 
@@ -93,6 +92,7 @@ header img {
   align-items: center;
   background: var(--main-color-background);
   width: calc(100% - 13px - 13px);
+  max-width: 1055px;
   border-radius: 50px 50px 0 0;
   padding-top: 32px;
   padding-left: 13px;
@@ -118,7 +118,9 @@ label {
   position: relative;
 }
 
-.entrees, .plats, .desserts {
+.entrees,
+.plats,
+.desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -145,7 +147,9 @@ label {
   background-color: var(--main-color-green);
 }
 
-.entree-label, .plat-label, .dessert-label {
+.entree-label,
+.plat-label,
+.dessert-label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -164,7 +168,8 @@ label {
 .entree-label #plat-checkbox3,
 .entree-label #dessert-checkbox,
 .entree-label #dessert-checkbox2,
-.entree-label #dessert-checkbox3, .plat-label #entree-checkbox,
+.entree-label #dessert-checkbox3,
+.plat-label #entree-checkbox,
 .plat-label #entree-checkbox2,
 .plat-label #entree-checkbox3,
 .plat-label #plat-checkbox,
@@ -172,7 +177,8 @@ label {
 .plat-label #plat-checkbox3,
 .plat-label #dessert-checkbox,
 .plat-label #dessert-checkbox2,
-.plat-label #dessert-checkbox3, .dessert-label #entree-checkbox,
+.plat-label #dessert-checkbox3,
+.dessert-label #entree-checkbox,
 .dessert-label #entree-checkbox2,
 .dessert-label #entree-checkbox3,
 .dessert-label #plat-checkbox,
@@ -183,10 +189,14 @@ label {
 .dessert-label #dessert-checkbox3 {
   display: none;
 }
-.entree-label :checked + #text-row, .plat-label :checked + #text-row, .dessert-label :checked + #text-row {
+.entree-label :checked + #text-row,
+.plat-label :checked + #text-row,
+.dessert-label :checked + #text-row {
   right: 0;
 }
-.entree-label .text, .plat-label .text, .dessert-label .text {
+.entree-label .text,
+.plat-label .text,
+.dessert-label .text {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -196,11 +206,15 @@ label {
   gap: 5px;
   overflow: hidden;
 }
-.entree-label .text h3, .plat-label .text h3, .dessert-label .text h3 {
+.entree-label .text h3,
+.plat-label .text h3,
+.dessert-label .text h3 {
   font-size: 18px;
   font-weight: 500;
 }
-.entree-label .text h4, .plat-label .text h4, .dessert-label .text h4 {
+.entree-label .text h4,
+.plat-label .text h4,
+.dessert-label .text h4 {
   font-size: 15px;
   font-weight: 300;
 }
@@ -273,6 +287,57 @@ footer .links a {
 footer .links .gras {
   font-size: 16px;
   font-weight: 500;
+}
+
+@media (min-width: 426px) {
+  body {
+    align-items: center;
+    background: white;
+  }
+  header {
+    width: 100%;
+  }
+  .image-resto {
+    height: 342px;
+  }
+  .image-resto img {
+    max-height: 383px;
+  }
+  .title {
+    justify-content: center;
+  }
+  .entrees,
+  .plats,
+  .desserts {
+    max-width: 634px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 25px;
+    padding-right: 45px;
+    width: calc(100% - 45px - 25px);
+  }
+  footer svg {
+    width: 139px;
+    height: 27px;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768.5px) {
+  footer {
+    gap: 15px;
+  }
+  footer .links {
+    gap: 15px;
+  }
 }
 
 /*# sourceMappingURL=paletteDuGout.css.map */

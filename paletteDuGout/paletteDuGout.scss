@@ -19,7 +19,6 @@
 body {
   display: flex;
   flex-direction: column;
-  max-width: 425px;
   background-color: var(--main-color-background);
 }
 header {
@@ -85,6 +84,7 @@ header {
   align-items: center;
   background: var(--main-color-background);
   width: calc(100% - 13px - 13px);
+  max-width: 1055px;
   border-radius: 50px 50px 0 0;
   padding-top: 32px;
   padding-left: 13px;
@@ -104,12 +104,14 @@ header {
     }
   }
 }
-label{
+label {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-.entrees, .plats, .desserts {
+.entrees,
+.plats,
+.desserts {
   display: flex;
   flex-direction: column;
 
@@ -135,7 +137,9 @@ label{
     background-color: var(--main-color-green);
   }
 }
-.entree-label, .plat-label, .dessert-label {
+.entree-label,
+.plat-label,
+.dessert-label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -153,8 +157,7 @@ label{
   #plat-checkbox3,
   #dessert-checkbox,
   #dessert-checkbox2,
-  #dessert-checkbox3
-   {
+  #dessert-checkbox3 {
     display: none;
   }
   :checked + #text-row {
@@ -206,12 +209,12 @@ label{
   }
 }
 
-.commandebtn{
+.commandebtn {
   display: flex;
   width: 186px;
   height: 50px;
   border-radius: 25px;
-  background:var(--main-color-buttonGradient);
+  background: var(--main-color-buttonGradient);
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -250,9 +253,53 @@ footer {
   }
 }
 
-@media (min-width: 426px){
-
+@media (min-width: 426px) {
+  body {
+    align-items: center;
+    background: white;
+  }
+  header {
+    width: 100%;
+  }
+  .image-resto {
+    height: 342px;
+    img {
+      max-height: 383px;
+    }
+  }
+  .title {
+    justify-content: center;
+  }
+  .entrees,
+  .plats,
+  .desserts {
+    max-width: 634px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 25px;
+    padding-right: 45px;
+    width: calc(100% - 45px - 25px);
+    svg {
+      width: 139px;
+      height: 27px;
+    }
+    .links {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      text-align: center;
+      align-items: center;
+    }
+  }
 }
-@media (min-width: 768.5px){
-
+@media (min-width: 768.5px) {
+  footer {
+    gap: 15px;
+    .links {
+      gap: 15px;
+    }
+  }
 }
