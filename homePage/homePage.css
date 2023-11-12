@@ -211,9 +211,16 @@ header img {
 .restaurants h2 {
   width: 100%;
 }
-.restaurants a {
-  text-decoration: none;
-  color: #101010;
+
+.restaurant {
+  position: relative;
+}
+.restaurant a {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
 }
 
 .coeur-label {

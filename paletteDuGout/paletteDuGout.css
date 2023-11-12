@@ -198,61 +198,64 @@ label {
 .dessert-label #dessert-checkbox3 {
   display: none;
 }
-.entree-label :checked + #text-row,
-.plat-label :checked + #text-row,
-.dessert-label :checked + #text-row {
+.entree-label :checked + .text-row,
+.plat-label :checked + .text-row,
+.dessert-label :checked + .text-row {
   right: 0;
+}
+.entree-label :checked + .text-row + .text,
+.plat-label :checked + .text-row + .text,
+.dessert-label :checked + .text-row + .text {
+  width: 60%;
 }
 .entree-label .text,
 .plat-label .text,
 .dessert-label .text {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 10px;
   height: 100%;
   gap: 5px;
-  overflow: hidden;
+  width: 80%;
 }
 .entree-label .text h3,
 .plat-label .text h3,
 .dessert-label .text h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 18px;
   font-weight: 500;
 }
 .entree-label .text h4,
 .plat-label .text h4,
 .dessert-label .text h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 15px;
   font-weight: 300;
 }
 
-#text-row {
+.text-row {
   display: flex;
   position: absolute;
   right: -60px;
   height: 100%;
   transition: all linear 0.5s;
   gap: 0px;
-}
-
-#text-row {
-  display: flex;
   flex-direction: row;
   padding: 0;
-  z-index: 1;
 }
-#text-row .prix {
+.text-row .prix {
   opacity: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  background: white;
   font-weight: 700;
   padding-bottom: 10px;
   padding-right: 10px;
-  min-width: 40px;
   animation: anim 2s linear 2.5s forwards;
 }
 
