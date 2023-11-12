@@ -141,7 +141,6 @@ label {
     background-color: var(--main-color-green);
   }
 }
-
 .entree-label,
 .plat-label,
 .dessert-label {
@@ -170,52 +169,59 @@ label {
   }
   :checked + .text-row {
     right: 0;
-    & +.text{
-    width: 60%;
+    & + .text {
+      width: 55%;
     }
   }
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 10px;
-    height: 100%;
-    gap: 5px;
-    width: 80%;
-    h3 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 18px;
-      font-weight: 500;
-    }
-    h4 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 15px;
-      font-weight: 300;
-    }
+}
+.text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  height: 100%;
+  gap: 5px;
+  width: 75%;
+  h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    font-weight: 300;
   }
 }
 
 .text-row {
   display: flex;
+}
+
+.text-row {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
   position: absolute;
   right: -60px;
   height: 100%;
   transition: all linear 0.5s;
   gap: 0px;
-  flex-direction: row;
-  padding: 0;
   .prix {
     opacity: 0;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    background: white;
     font-weight: 700;
     padding-bottom: 10px;
     padding-right: 10px;
+    min-width: 40px;
     animation: anim 2s linear 2.5s forwards;
   }
 }
@@ -237,10 +243,10 @@ label {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   animation: anim 2s linear 3s forwards;
-&:hover{
-  opacity: 0.8;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-}
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  }
 }
 
 footer {
@@ -272,14 +278,13 @@ footer {
   }
 }
 @keyframes anim {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
-
 
 @media (min-width: 426px) {
   body {

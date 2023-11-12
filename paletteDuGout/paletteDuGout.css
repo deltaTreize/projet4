@@ -206,31 +206,27 @@ label {
 .entree-label :checked + .text-row + .text,
 .plat-label :checked + .text-row + .text,
 .dessert-label :checked + .text-row + .text {
-  width: 60%;
+  width: 55%;
 }
-.entree-label .text,
-.plat-label .text,
-.dessert-label .text {
+
+.text {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 10px;
   height: 100%;
   gap: 5px;
-  width: 80%;
+  width: 75%;
 }
-.entree-label .text h3,
-.plat-label .text h3,
-.dessert-label .text h3 {
+.text h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 18px;
   font-weight: 500;
 }
-.entree-label .text h4,
-.plat-label .text h4,
-.dessert-label .text h4 {
+.text h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -240,22 +236,28 @@ label {
 
 .text-row {
   display: flex;
+}
+
+.text-row {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
   position: absolute;
   right: -60px;
   height: 100%;
   transition: all linear 0.5s;
   gap: 0px;
-  flex-direction: row;
-  padding: 0;
 }
 .text-row .prix {
   opacity: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  background: white;
   font-weight: 700;
   padding-bottom: 10px;
   padding-right: 10px;
+  min-width: 40px;
   animation: anim 2s linear 2.5s forwards;
 }
 
