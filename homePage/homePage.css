@@ -126,7 +126,7 @@ header {
     transition: all 0.3s; }
     .explorateur .button:hover {
       opacity: 0.8;
-      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35); }
 
 .fonctionnement {
   box-sizing: border-box;
