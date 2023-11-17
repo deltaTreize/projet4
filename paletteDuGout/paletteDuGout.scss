@@ -89,6 +89,8 @@ header {
   padding-right: 13px;
   gap: 40px;
   .title {
+    box-sizing: border-box;
+    padding-right: 20px;
     opacity: 0;
     display: flex;
     flex-direction: row;
