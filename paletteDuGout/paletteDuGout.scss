@@ -246,7 +246,7 @@ label {
   animation: anim 2s linear 3s forwards;
   &:hover {
     background: linear-gradient(rgba(255, 122, 217, 0.8), rgba(146, 86, 220, 0.8));
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
   }
 }
 
