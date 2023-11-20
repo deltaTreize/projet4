@@ -37,13 +37,14 @@ main {
     img {
         position: absolute;
         left: 50%;
-        top: 5%;
-        transform: translate(-50%, 30%);
+        top: 0;
+        transform: translate(-50%);
         width: 50%;
         animation: spin 2s linear infinite;
     }
 }
 header {
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -80,6 +81,7 @@ header {
     gap: 17px;
     height: 50px;
     width: 100%;
+    margin-top: 63px;
     background-color: var(--main-color-grey2);
     img {
         width: 12px;
@@ -194,7 +196,7 @@ header {
                 padding-left: 10%;
                 gap: 5%;
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-                p {
+                figcaption {
                     font-size: 16px;
                     font-weight: 500;
                 }
@@ -390,7 +392,7 @@ footer {
                     padding-left: 15%;
                     gap: 5%;
                     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-                    p {
+                    figcaption {
                         font-size: 12px;
                     }
                 }
@@ -429,12 +431,13 @@ footer {
         }
     }
 }
+
 @media (min-width: 768px) {
     .fonctionnement {
         .boutton {
             .group1 {
                 .group3 {
-                    p {
+                    figcaption {
                         font-size: 16px;
                     }
                 }
@@ -470,9 +473,11 @@ footer {
     .restaurants {
         padding-left: 180px;
         padding-right: 180px;
-    }
-    .restaurant .image img {
-        height: 150%;
+        .image {
+            img {
+                height: 200%;
+            }
+        }
     }
     footer {
         .links {
