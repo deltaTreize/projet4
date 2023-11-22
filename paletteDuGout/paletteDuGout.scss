@@ -67,6 +67,7 @@ header {
   width: 22px;
   height: 21px;
   box-shadow: none;
+  cursor: pointer;
   .coeur-svg{
     fill-opacity: 0;
     transition: all 2s steps(6);
@@ -163,6 +164,7 @@ label {
   align-items: flex-end;
   padding-left: 15px;
   animation: anim 1s linear 1.5s forwards;
+  cursor: pointer;
   #entree-checkbox,
   #entree-checkbox2,
   #entree-checkbox3,

@@ -60,7 +60,8 @@ header {
   align-items: center;
   width: 22px;
   height: 21px;
-  box-shadow: none; }
+  box-shadow: none;
+  cursor: pointer; }
   .coeur-label .coeur-svg {
     fill-opacity: 0;
     transition: all 2s steps(6); }
@@ -150,7 +151,8 @@ label {
   overflow: hidden;
   align-items: flex-end;
   padding-left: 15px;
-  animation: anim 1s linear 1.5s forwards; }
+  animation: anim 1s linear 1.5s forwards;
+  cursor: pointer; }
   .entree-label #entree-checkbox,
   .entree-label #entree-checkbox2,
   .entree-label #entree-checkbox3,
