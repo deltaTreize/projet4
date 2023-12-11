@@ -1,0 +1,23 @@
+.heart-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+  .heart-svg {
+      fill-opacity: 0;
+      transition: all 2s linear;
+  }
+  #heart-checkbox,
+  #heart-checkbox2,
+  #heart-checkbox3,
+  #heart-checkbox4 {
+      display: none;
+      &:checked + .heart-svg {
+          fill-opacity: 1;
+          stroke: none;
+      }
+  }
+
+}

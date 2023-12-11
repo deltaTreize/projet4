@@ -1,0 +1,249 @@
+@use 'all';
+@use 'root';
+@use 'header';
+@use 'heart-label';
+@use 'btn';
+@use 'footer';
+
+
+header {
+    .arrow {
+        display: flex;
+        position: absolute;
+        left: 17px;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        img {
+            width: 17.2px;
+            height: 16px;
+        }
+    }
+}
+.image-resto {
+    position: absolute;
+    top: 63px;
+    height: 275px;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-60%);
+        width: 100%;
+        min-height: 130%;
+    }
+}
+.container {
+    box-sizing: border-box;
+    margin-top: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--main-color-background);
+    width: 100%;
+    max-width: 1055px;
+    border-radius: 50px 50px 0 0;
+    padding-top: 32px;
+    padding-left: 13px;
+    padding-right: 13px;
+    gap: 40px;
+    .title {
+        box-sizing: border-box;
+        padding-right: 20px;
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+        animation: anim 0.5s linear 0.5s forwards;
+        h2 {
+            font-family: shrikhand;
+            font-size: 28px;
+            font-weight: 400;
+            width: auto;
+        }
+    }
+}
+.entrees,
+.plats,
+.desserts {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    animation: anim 0.5s linear 1s forwards;
+}
+.title-box {
+    height: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+        font-size: 16px;
+        font-weight: 300;
+        color: #000000;
+        padding: 0;
+        text-transform: uppercase;
+    }
+    .barre-verte {
+        display: flex;
+        width: 40px;
+        height: 3px;
+        background-color: var(--main-color-green);
+    }
+}
+.plat {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    opacity: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    height: 69px;
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    align-items: flex-end;
+    padding-left: 15px;
+    animation: anim 1s linear 1.5s forwards;
+    &:hover .text-row {
+        right: 0;
+    }
+    &:hover .text {
+        width: 55%;
+    }
+}
+.text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    height: 100%;
+    gap: 5px;
+    width: 75%;
+    h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    h4 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+        font-weight: 300;
+    }
+}
+.text-row {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    position: absolute;
+    right: -60px;
+    height: 100%;
+    transition: all linear 0.5s;
+    gap: 0px;
+    .prix {
+        opacity: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background: white;
+        font-weight: 700;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        min-width: 40px;
+        animation: anim 2s linear 2.5s forwards;
+    }
+}
+
+.button {
+    opacity: 0;
+    width: 186px;
+    margin-bottom: 40px;
+}
+footer {
+    gap: 16px;
+        .gras {
+            font-size: 16px;
+        }
+    }
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 426px) {
+    body {
+        align-items: center;
+        background: white;
+    }
+    header {
+        width: 100%;
+    }
+    .title {
+        justify-content: center;
+    }
+    .entrees,
+    .plats,
+    .desserts {
+        max-width: 634px;
+    }
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 15px;
+        padding-right: 45px;
+        width: 100%;
+        svg {
+            width: 139px;
+            height: 27px;
+        }
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}
+@media (426px <= width <=500px) {
+    footer {
+        padding: 10px;
+        gap: 15px;
+        .links {
+            font-size: 10px;
+            gap: 3px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        margin-top: 283px;
+        width: 70%;
+    }
+    .image-resto {
+        height: 383px;
+     }
+    footer {
+        gap: 15px;
+        .links {
+            gap: 15px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+footer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 25px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: var(--main-color-grey);
+  svg {
+      width: 139px;
+      height: 27px;
+  }
+  .links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      a {
+          color: #fff;
+          text-decoration: none;
+      }
+      .gras {
+        font-weight: 500;
+      }
+    }
+}

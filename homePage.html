@@ -10,11 +10,15 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
             rel="stylesheet"
         >
-        <link rel="stylesheet" href="./homePage.css">
+        <link rel="stylesheet" href="./SASS-Components/homePage.css">
     </head>
     <body>
         <div class="loader" id="loader">
-            <img src="./images/logo/assiette.png" alt="assiette">
+            <div class="logo" id="loader-logo"> 
+                <img src="./images/logo/ohmyfood.png" alt="logo ohmyfood" >
+             </div>
+            <h3>Veuillez patienter, nous dressons votre table...</h3>
+            <img src="./images/logo/assiette2.png" alt="assiette" id="loader-plat">
         </div>
         <main>
             <header>
@@ -32,9 +36,9 @@
                     Découvrez des restaurants d’exception, sélectionnés par nos
                     soins.
                 </p>
-                <a class="button" href="#restaurants"
-                    >Explorer nos restaurants</a
-                >
+                <a class="button" href="#restaurants">
+                    Explorer nos restaurants
+                </a>
             </section>
             <div class="fonctionnement">
                 <h3>Fonctionnement</h3>
@@ -68,8 +72,7 @@
             <section class="restaurants" id="restaurants">
                 <h2>Restaurants</h2>
                 <div class="restaurentsListe">
-                    <article class="restaurant">
-                        <a href="./menus/paletteDuGout.html"></a>
+                    <a href="./menus/paletteDuGout.html" class="restaurant">
                         <div class="image">
                             <img
                                 src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -115,9 +118,8 @@
                                 </defs>
                             </svg>
                         </label>
-                    </article>
-                    <article class="restaurant">
-                        <a href="./menus/noteEnchantee.html"></a>
+                </a>
+                <a href="./menus/noteEnchantee.html" class="restaurant">
                         <div class="image">
                             <img
                                 src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -163,9 +165,8 @@
                                 </defs>
                             </svg>
                         </label>
-                    </article>
-                    <article class="restaurant">
-                        <a href="./menus/francaise.html"></a>
+                </a>
+                <a href="./menus/francaise.html" class="restaurant">
                         <div class="image">
                             <img
                                 src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -210,9 +211,8 @@
                                 </defs>
                             </svg>
                         </label>
-                    </article>
-                    <article class="restaurant">
-                        <a href="./menus/deliceDesSens.html"></a>
+                </a>
+                <a href="./menus/deliceDesSens.html" class="restaurant">
                         <div class="image">
                             <img
                                 src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -257,7 +257,7 @@
                                 </defs>
                             </svg>
                         </label>
-                    </article>
+                </a>
                 </div>
             </section>
             <footer>

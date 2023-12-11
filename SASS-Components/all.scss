@@ -1,0 +1,9 @@
+* {
+  font-family: Roboto;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color-background);
+}
